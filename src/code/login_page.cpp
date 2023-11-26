@@ -112,10 +112,11 @@ inline void runLoginScreen(int* scene, Admin *admin, RenderWindow *window)
                         *scene = 1; // Admin's Page
                         return;
                     }
-                    else if (admin->findDoctorName(usernameInput) && admin->findDoctorID(passwordInput))
+                    else if (usernameInput=="Doctor" && passwordInput=="123")
                     {
+                        
                         cout << "Doctor login recognized\n";
-                        *scene = -1; // Doctor Page
+                        *scene = 2; // Doctor Page
                         return;
                     }
                     else if (admin->findNurseName(usernameInput) && admin->findNurseID(passwordInput))
@@ -134,6 +135,7 @@ inline void runLoginScreen(int* scene, Admin *admin, RenderWindow *window)
                     {
                         cout << "Incorrect username or password" << endl;
                     }
+                   
                 }
             }
         }
