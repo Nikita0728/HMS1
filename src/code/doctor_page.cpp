@@ -38,7 +38,7 @@ Doctor_id(doctor->getID(), font, 60);
 	Check_ReportsText.setPosition(Vector2f(900, 500));
 	Draw_SalaryText.setPosition(Vector2f(900, 800));
 Doctor_name.setPosition(Vector2f(440 ,200));
-Doctor_id.setPosition(Vector2f(450, 400));
+Doctor_id.setPosition(Vector2f(430, 400));
 
     RectangleShape background(Vector2f(1600, 1050));
 	background.setTexture(&backgroundTexture);
