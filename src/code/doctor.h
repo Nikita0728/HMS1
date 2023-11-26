@@ -15,16 +15,23 @@ public:
 	
 	/* Constructors */
 	Doctor();
-	Doctor(string, int);
+	Doctor(string , int);
+	
 
 	/* Getter Functions */
 	string getName();
+	
 	string getID();
+	
+	
 
 	/* Setter Functions */
 	void setName(string);
 	void setID(int);
 	void setAvailabilty(int, int);
+	
+		
+	
 
 };
 

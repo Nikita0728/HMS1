@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <string>
-#include "admin.h"
+#include "doctor.h"
 
 using namespace std;
 using namespace sf;
@@ -9,6 +9,7 @@ using namespace sf;
 inline void runDoctorPage(int* scene, Doctor* doctor, RenderWindow* window)
 {
 	/* Loading the Inika font and if failed to do so close the program */
+
 	Font font;
 	if (!font.loadFromFile("src/Assets/Font/Inika/Inika-Bold.ttf"))
 	{
@@ -16,6 +17,7 @@ inline void runDoctorPage(int* scene, Doctor* doctor, RenderWindow* window)
 		*scene = -1;
 		return;
 	}
+
 
 
 	/* Loading the background and if failed to do so close the program */
@@ -28,12 +30,15 @@ inline void runDoctorPage(int* scene, Doctor* doctor, RenderWindow* window)
 	}
     	Text Prescribe_MedicineText("Prescribe Medicine", font, 60),
 		Check_ReportsText("Check Reports", font, 60),
-		Draw_SalaryText("Draw Salary", font, 60);
+		Draw_SalaryText("Draw Salary", font, 60),
+	Doctor_name(doctor->getName(), font, 60),
+Doctor_id(doctor->getID(), font, 60);
 
 	Prescribe_MedicineText.setPosition(Vector2f(900, 200));
 	Check_ReportsText.setPosition(Vector2f(900, 500));
 	Draw_SalaryText.setPosition(Vector2f(900, 800));
-
+Doctor_name.setPosition(Vector2f(440 ,200));
+Doctor_id.setPosition(Vector2f(450, 400));
 
     RectangleShape background(Vector2f(1600, 1050));
 	background.setTexture(&backgroundTexture);
@@ -71,7 +76,8 @@ inline void runDoctorPage(int* scene, Doctor* doctor, RenderWindow* window)
 		window->draw(Prescribe_MedicineText);
 		window->draw(Check_ReportsText);
 		window->draw(Draw_SalaryText);
-
+	window->draw(Doctor_name);
+	window->draw(Doctor_id);
 		window->display();
 		}
 }}

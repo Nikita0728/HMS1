@@ -3,6 +3,7 @@
 #include "admin_page.cpp"
 #include "doctor_page.cpp"
 
+
 int main()
 {
   
@@ -12,7 +13,7 @@ int main()
     window.setVerticalSyncEnabled(true);
 
     Admin admin;
-Doctor doctor;
+Doctor doctor("sushma " , 2);
 
     while (*scene != -1)
     {
