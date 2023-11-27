@@ -8,13 +8,13 @@
 int main()
 {
   
-    int* scene = new int(3); 
+    int* scene = new int(2); 
 
     RenderWindow window(VideoMode(1600, 900), "HMS");
     window.setVerticalSyncEnabled(true);
 
     Admin admin;
-Doctor doctor("sushma " , 2 ,"Neuro" ,"Surgical ward");
+Doctor doctor("Adam Smith " , 2 ,"Neuro" ,"Surgical ward");
 Receptionist receptionist;
     while (*scene != -1)
     {

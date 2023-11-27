@@ -39,10 +39,10 @@ Doctor_department(doctor->getDepartment(), font ,60);
 	Prescribe_MedicineText.setPosition(Vector2f(900, 200));
 	Check_ReportsText.setPosition(Vector2f(900, 500));
 	Draw_SalaryText.setPosition(Vector2f(900, 800));
-Doctor_name.setPosition(Vector2f(440 ,200));
-Doctor_id.setPosition(Vector2f(360, 400));
-Doctor_specialization.setPosition(Vector2f(350 ,600));
-Doctor_department.setPosition(Vector2f(380 ,600));
+Doctor_name.setPosition(Vector2f(400,220));
+Doctor_id.setPosition(Vector2f(300, 340));
+Doctor_specialization.setPosition(Vector2f(400 ,450));
+Doctor_department.setPosition(Vector2f(370 ,580));
 
     RectangleShape background(Vector2f(1600, 1050));
 	background.setTexture(&backgroundTexture);
