@@ -32,9 +32,9 @@ inline void runDoctorPage(int* scene, Doctor* doctor, RenderWindow* window)
 		Check_ReportsText("Check Reports", font, 60),
 		Draw_SalaryText("Draw Salary", font, 60),
 	Doctor_name(doctor->getName(), font, 60),
-Doctor_id(doctor->getID(), font, 60),
-Doctor_specialization(doctor->getSpecialization() , font ,60),
-Doctor_department(doctor->getDepartment(), font ,60);
+Doctor_id(doctor->getID(), font, 56),
+Doctor_specialization(doctor->getSpecialization() , font ,56),
+Doctor_department(doctor->getDepartment(), font ,56);
 
 	Prescribe_MedicineText.setPosition(Vector2f(900, 200));
 	Check_ReportsText.setPosition(Vector2f(900, 500));
