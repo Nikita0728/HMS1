@@ -19,7 +19,7 @@ public:
 	bool findDoctorName(string name);
 	bool findDoctorID(string id);
 
-	void addDoctorToDB(string name, int id);
+	void addDoctorToDB(string name, int id , string specs, string depart );
 
 	/* Nurse Functions */
 	bool findNurseName(string name);

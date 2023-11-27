@@ -28,9 +28,9 @@ bool Admin::findDoctorID(string id)
 	return false;
 }
 
-void Admin::addDoctorToDB(string name, int id ,string specs)
+void Admin::addDoctorToDB(string name, int id ,string specs, string depart)
 {
-	Doctor newDoctor(name, id);
+	Doctor newDoctor(name, id, specs, depart);
 	_doctorDB.push_back(newDoctor);
 }
 

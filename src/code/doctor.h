@@ -8,14 +8,14 @@ using namespace std;
 class Doctor
 {
 private:
-	string _name, _id , spec;
+	string _name, _id , _spec ,_depart;
 	int availableFrom, availableTo;
 
 public:
 	
 	/* Constructors */
 	Doctor();
-	Doctor(string , int, string);
+	Doctor(string , int, string, string);
 	
 
 	/* Getter Functions */
@@ -23,12 +23,14 @@ public:
 	
 	string getID();
 	string getSpecialization();
+	string getDepartment();
 	
 
 	/* Setter Functions */
 	void setName(string);
 	void setID(int);
 	void setSpecialization(string);
+	void setDepartment(string);
 	void setAvailabilty(int, int);
 	
 		

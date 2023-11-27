@@ -7,13 +7,13 @@ Doctor::Doctor()
 
 }
 
-Doctor::Doctor(string name, int id ,string specs)
+Doctor::Doctor(string name, int id ,string specs, string depart)
 {
 	setName(name);
 	setID(id);
 	
 	setSpecialization(specs);
-
+setDepartment(depart);
 }
 
 /* Getter Functions */
@@ -26,7 +26,11 @@ string Doctor::getID(){
 	return _id;
 }
 string Doctor::getSpecialization(){
-	return spec;
+	return _spec;
+}
+string Doctor::getDepartment()
+{
+	return _depart;
 }
 /* Setter Functions */
 
@@ -39,7 +43,11 @@ void Doctor::setID(int id){
 }
 void Doctor::setSpecialization(string specs)
 {
-	spec = specs;
+	_spec = specs;
+}
+void Doctor::setDepartment(string depart)
+{
+	_depart = depart;
 }
 
 void Doctor::setAvailabilty(int from, int to)
