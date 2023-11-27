@@ -27,7 +27,7 @@ inline void runReceptionistPage(int* scene, Receptionist* Receptionist, RenderWi
 
 	/* Loading the background and if failed to do so close the program */
 	Texture backgroundTexture;
-	if (!backgroundTexture.loadFromFile("src/Assets/Backgrounds/HMS-Home_Screen.jpg"))
+	if (!backgroundTexture.loadFromFile("src/Assets/Backgrounds/reception.png"))
 	{
 		cout << "Error loading background image\n";
 		*scene = -1;
@@ -38,11 +38,14 @@ inline void runReceptionistPage(int* scene, Receptionist* Receptionist, RenderWi
 		Time("Time", font, 60);
 	
 
-	Patients_list.setPosition(Vector2f(900, 200));
-	Appointment_with.setPosition(Vector2f(900, 500));
-	Time.setPosition(Vector2f(900, 800));
+	Patients_list.setPosition(Vector2f(150, 140));
+	Appointment_with.setPosition(Vector2f(490, 140));
+	Time.setPosition(Vector2f(1200, 140));
 
-	Patients_list.setFillColor(sf::Color::Magenta);
+	Patients_list.setFillColor(sf::Color::Magenta),
+	Appointment_with.setFillColor(sf::Color::Magenta),
+	Time.setFillColor(sf::Color::Magenta);
+
     RectangleShape background(Vector2f(1600, 1050));
 	background.setTexture(&backgroundTexture);
 	background.setPosition(Vector2f(0, 0));
