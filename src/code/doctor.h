@@ -8,26 +8,27 @@ using namespace std;
 class Doctor
 {
 private:
-	string _name, _id;
+	string _name, _id , spec;
 	int availableFrom, availableTo;
 
 public:
 	
 	/* Constructors */
 	Doctor();
-	Doctor(string , int);
+	Doctor(string , int, string);
 	
 
 	/* Getter Functions */
 	string getName();
 	
 	string getID();
-	
+	string getSpecialization();
 	
 
 	/* Setter Functions */
 	void setName(string);
 	void setID(int);
+	void setSpecialization(string);
 	void setAvailabilty(int, int);
 	
 		

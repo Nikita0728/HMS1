@@ -32,13 +32,16 @@ inline void runDoctorPage(int* scene, Doctor* doctor, RenderWindow* window)
 		Check_ReportsText("Check Reports", font, 60),
 		Draw_SalaryText("Draw Salary", font, 60),
 	Doctor_name(doctor->getName(), font, 60),
-Doctor_id(doctor->getID(), font, 60);
+Doctor_id(doctor->getID(), font, 60),
+Doctor_specialization(doctor->getSpecialization() , font ,60);
+cout<<doctor->getSpecialization();
 
 	Prescribe_MedicineText.setPosition(Vector2f(900, 200));
 	Check_ReportsText.setPosition(Vector2f(900, 500));
 	Draw_SalaryText.setPosition(Vector2f(900, 800));
 Doctor_name.setPosition(Vector2f(440 ,200));
 Doctor_id.setPosition(Vector2f(430, 400));
+Doctor_specialization.setPosition(Vector2f(450 ,600));
 
     RectangleShape background(Vector2f(1600, 1050));
 	background.setTexture(&backgroundTexture);
@@ -78,6 +81,7 @@ Doctor_id.setPosition(Vector2f(430, 400));
 		window->draw(Draw_SalaryText);
 	window->draw(Doctor_name);
 	window->draw(Doctor_id);
+	window->draw(Doctor_specialization);
 		window->display();
 		}
 }}

@@ -13,7 +13,7 @@ int main()
     window.setVerticalSyncEnabled(true);
 
     Admin admin;
-Doctor doctor("sushma " , 2);
+Doctor doctor("sushma " , 2 ,"Neuro");
 
     while (*scene != -1)
     {
