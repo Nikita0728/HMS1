@@ -70,34 +70,32 @@ void Admin::addNurseToDB(string name, int id)
 
 /* Receptionest Functions */
 
-bool Admin::findReceptionistName(string name)
-{
-	int i;
-
+ bool Admin::findReceptionistName(string name)
+ {
+ 	int i;
 	for (i = 0; i < _receptionistDB.size(); i++)
-	{
-		if (_receptionistDB[i].getName() == name)
-			return true;
-	}
+ 	{
+ 		if (_receptionistDB[i].getPName() == name)
+ 			return true;
+ 	}
 
-	return false;
-}
+ 	return false;
+ }
+//  bool Admin::findReceptionistID(string id)
+//  {
+//  	int i;
 
-bool Admin::findReceptionistID(string id)
+//  	for (i = 0; i < _receptionistDB.size(); i++)
+//  	{
+//  		if (_receptionistDB[i].getID() == id)
+//  			return true;
+//  	}
+
+//  	return false;
+//  }
+
+void Admin::addReceptionistToDB(string pname,  string dname, int time)
 {
-	int i;
-
-	for (i = 0; i < _receptionistDB.size(); i++)
-	{
-		if (_receptionistDB[i].getID() == id)
-			return true;
-	}
-
-	return false;
-}
-
-void Admin::addReceptionistToDB(string name, int id)
-{
-	Receptionist newReceptionist(name, id);
+	Receptionist newReceptionist(pname,dname, time);
 	_receptionistDB.push_back(newReceptionist);
 }

@@ -29,9 +29,9 @@ public:
 
 	/* Receptionist Functions */
 	bool findReceptionistName(string name);
-	bool findReceptionistID(string id);
+	
 
-	void addReceptionistToDB(string name, int id);
+	void addReceptionistToDB(string pname,string dname, int time);
 
 };
 

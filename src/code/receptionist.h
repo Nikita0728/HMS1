@@ -8,7 +8,7 @@ class Receptionist
 {
 private:
 	string P_name,D_name;
-	int Time,_id;
+	int Time;
 
 public:
 
@@ -18,16 +18,16 @@ public:
 
 	/* Getter Functions */
 	string getPName();
-    string getDName();
-    // string getDname();
-    int getTime();
+	string getDname();
+	int getTime();
 	string getID();
 
 	/* Setter Functions */
 	void setPName(string );
 	void setDName(string);
-	int setTime(int);
-	void setID(int);
+	void setTime(int);
+	
+	// void setID(int);
 
 };
 
