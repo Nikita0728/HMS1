@@ -38,6 +38,7 @@ inline void runDoctorPage(int* scene, Doctor* doctor, RenderWindow* window)
 Doctor_id(doctor->getID(), font, 56),
 Doctor_specialization(doctor->getSpecialization() , font ,56),
 Doctor_department(doctor->getDepartment(), font ,56),
+
 Log_out("Log out", font , 30);
 
 	Prescribe_MedicineText.setPosition(Vector2f(900, 200));
@@ -47,7 +48,9 @@ Doctor_name.setPosition(Vector2f(400,220));
 Doctor_id.setPosition(Vector2f(300, 340));
 Doctor_specialization.setPosition(Vector2f(400 ,450));
 Doctor_department.setPosition(Vector2f(370 ,580));
-Log_out.setPosition(Vector2f(300,50));
+Log_out.setPosition(Vector2f(1400,50));
+
+Log_out.setFillColor(sf::Color::Blue);
 
     RectangleShape background(Vector2f(1600, 1050));
 	background.setTexture(&backgroundTexture);
