@@ -19,7 +19,7 @@ string Receptionist::getDName() {
 	return D_name;
 ;
 }
-string Receptionist::getTime() {
+int Receptionist::getTime() {
 	return Time;
 }
 
@@ -31,7 +31,4 @@ void Receptionist::setDName(string dname) {
 }
 void Receptionist::setTime(int time) {
 	Time = time;
-}
-void Receptionist::setID(int id) {
-	_id = "Rep-" + to_string(id);
 }

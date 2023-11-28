@@ -33,7 +33,7 @@ Receptionist Receptionist("Xyz", "DR.lijan stha" , 10  );
                 window.clear();
                 break;
                 case 3:
-                runReceptionistPage(scene ,&receptionist , &window);
+                runReceptionistPage(scene ,&Receptionist , &window);
                 window.clear();
                 break;
             /*
