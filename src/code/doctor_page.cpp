@@ -2,10 +2,13 @@
 #include <iostream>
 #include <string>
 #include "doctor.h"
-
+#include "admin.h"
 using namespace std;
 using namespace sf;
 
+
+
+ 
 inline void runDoctorPage(int* scene, Doctor* doctor, RenderWindow* window)
 {
 	/* Loading the Inika font and if failed to do so close the program */
@@ -34,7 +37,8 @@ inline void runDoctorPage(int* scene, Doctor* doctor, RenderWindow* window)
 	Doctor_name(doctor->getName(), font, 60),
 Doctor_id(doctor->getID(), font, 56),
 Doctor_specialization(doctor->getSpecialization() , font ,56),
-Doctor_department(doctor->getDepartment(), font ,56);
+Doctor_department(doctor->getDepartment(), font ,56),
+Log_out("Log out", font , 30);
 
 	Prescribe_MedicineText.setPosition(Vector2f(900, 200));
 	Check_ReportsText.setPosition(Vector2f(900, 500));
@@ -43,6 +47,7 @@ Doctor_name.setPosition(Vector2f(400,220));
 Doctor_id.setPosition(Vector2f(300, 340));
 Doctor_specialization.setPosition(Vector2f(400 ,450));
 Doctor_department.setPosition(Vector2f(370 ,580));
+Log_out.setPosition(Vector2f(300,50));
 
     RectangleShape background(Vector2f(1600, 1050));
 	background.setTexture(&backgroundTexture);
@@ -57,6 +62,7 @@ Doctor_department.setPosition(Vector2f(370 ,580));
 				*scene = -1;
 				window->close();
 			}
+			
 
 			if (event.type == Event::MouseButtonPressed)
 			{
@@ -72,6 +78,12 @@ Doctor_department.setPosition(Vector2f(370 ,580));
 				{
 					cout << "Draw Salary button pressed!\n";
 				}
+				if (Log_out.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
+				{
+					*scene =0;
+					return;
+					cout<<"logoutpressed";
+				}
 			}
             window->clear(Color::White);
 
@@ -84,6 +96,7 @@ Doctor_department.setPosition(Vector2f(370 ,580));
 	window->draw(Doctor_id);
 	window->draw(Doctor_specialization);
 	window->draw(Doctor_department);
+	window->draw(Log_out);
 		window->display();
 		}
 }}
