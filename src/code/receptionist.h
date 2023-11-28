@@ -18,7 +18,7 @@ public:
 
 	/* Getter Functions */
 	string getPName();
-	string getDname();
+	string getDName();
 	int getTime();
 	string getID();
 
