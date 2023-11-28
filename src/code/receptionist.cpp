@@ -5,24 +5,33 @@ Receptionist::Receptionist()
 
 }
 
-Receptionist::Receptionist(string name, int id)
+Receptionist::Receptionist(string pname, string dname , int time)
 {
-	setName(name);
-	setID(id);
+	setPName(pname);
+	setDName(dname);
+	setTime(time);
 }
 
-string Receptionist::getName() {
-	return _name;
+string Receptionist::getPName() {
+	return P_name;
+}
+string Receptionist::getDName() {
+	return D_name;
+;
+}
+string Receptionist::getTime() {
+	return Time;
 }
 
-string Receptionist::getID() {
-	return _id;
+void Receptionist::setPName(string pname) {
+	P_name = pname;
 }
-
-void Receptionist::setName(string name) {
-	_name = name;
+void Receptionist::setDName(string dname) {
+	D_name = dname;
 }
-
+void Receptionist::setTime(int time) {
+	Time = time;
+}
 void Receptionist::setID(int id) {
 	_id = "Rep-" + to_string(id);
 }

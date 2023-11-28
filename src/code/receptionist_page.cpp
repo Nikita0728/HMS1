@@ -6,6 +6,7 @@
 #include <iostream>
 #include <string>
 #include "receptionist.h"
+#include "receptionist.cpp"
 
 
 using namespace std;
@@ -35,12 +36,14 @@ inline void runReceptionistPage(int* scene, Receptionist* Receptionist, RenderWi
 	}
     	Text Patients_list("Patient list", font, 60),
 		Appointment_with("Appointment with", font, 60),
-		Time("Time", font, 60);
+		Time("Time", font, 60),
+		Patient_list_first(Receptionist->getPName() , font ,50);
 	
 
 	Patients_list.setPosition(Vector2f(150, 140));
 	Appointment_with.setPosition(Vector2f(490, 140));
 	Time.setPosition(Vector2f(1200, 140));
+	Patient_list_first.setPosition(Vector2f(1200, 140));
 
 	Patients_list.setFillColor(sf::Color::Magenta),
 	Appointment_with.setFillColor(sf::Color::Magenta),
@@ -66,7 +69,7 @@ inline void runReceptionistPage(int* scene, Receptionist* Receptionist, RenderWi
 		window->draw(Patients_list);
 		window->draw(Appointment_with);
 		window->draw(Time);
-	
+	window->draw(Patient_list_first);
 		window->display();
 		}
 }}

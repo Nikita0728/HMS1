@@ -7,21 +7,26 @@ using namespace std;
 class Receptionist
 {
 private:
-	string _name, _id;
+	string P_name,D_name;
+	int Time,_id;
 
 public:
 
 	/* Constructors */
 	Receptionist();
-	Receptionist(string name, int id);
+	Receptionist(string pname,  string dname, int time);
 
 	/* Getter Functions */
-	string getName();
+	string getPName();
+	string getDname();
+	int getTime();
 	string getID();
 
 	/* Setter Functions */
-	void setName(string name);
-	void setID(int id);
+	void setPName(string );
+	void setDName(string);
+	int setTime(int);
+	void setID(int);
 
 };
 
