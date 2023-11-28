@@ -15,7 +15,7 @@ int main()
 
     Admin admin;
 Doctor doctor("Adam Smith " , 2 ,"Neuro" ,"Surgical ward");
-Receptionist Receptionist("Xyz", "DR.lijan stha" , 10  );
+Receptionist receptionist("Xyz", "DR.lijan stha" , 10  );
     while (*scene != -1)
     {
         switch (*scene)
@@ -33,7 +33,7 @@ Receptionist Receptionist("Xyz", "DR.lijan stha" , 10  );
                 window.clear();
                 break;
                 case 3:
-                runReceptionistPage(scene ,&Receptionist , &window);
+                runReceptionistPage(scene ,&receptionist , &window);
                 window.clear();
                 break;
             /*

@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string>
 #include "receptionist.h"
-#include "receptionist.cpp"
+// #include "receptionist.cpp"
 
 
 using namespace std;
