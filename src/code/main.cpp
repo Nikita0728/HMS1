@@ -8,7 +8,7 @@
 int main()
 {
   
-    int* scene = new int(3); 
+    int* scene = new int(0); 
 
     RenderWindow window(VideoMode(1600, 900), "HMS");
     window.setVerticalSyncEnabled(true);

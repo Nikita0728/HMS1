@@ -35,11 +35,14 @@ inline void runAdminPage(int* scene, Admin* admin, RenderWindow* window)
 
 	Text addStaffText("Add Staff\n Member", font, 60),
 		deleteStaffText("Delete Staff\n  Member", font, 60),
-		updateStaffText("Update Staff\n   Member", font, 60);
+		updateStaffText("Update Staff\n   Member", font, 60),
+		Log_out("Log out", font , 30);
 
 	addStaffText.setPosition(Vector2f(136, 54));
 	deleteStaffText.setPosition(Vector2f(652, 54));
 	updateStaffText.setPosition(Vector2f(1164, 54));
+	Log_out.setPosition(Vector2f(1400,800));
+	Log_out.setFillColor(sf::Color::Blue);
 
 	/* End of declaring */
 
@@ -67,6 +70,12 @@ inline void runAdminPage(int* scene, Admin* admin, RenderWindow* window)
 				if (updateStaffText.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
 				{
 					cout << "Update button pressed!\n";
+				}
+				if (Log_out.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
+				{
+					*scene =0;
+					return;
+					cout<<"logoutpressed";
 				}
 			}
 		}
@@ -99,7 +108,7 @@ inline void runAdminPage(int* scene, Admin* admin, RenderWindow* window)
 		window->draw(addStaffText);
 		window->draw(deleteStaffText);
 		window->draw(updateStaffText);
-
+window->draw(Log_out);
 		window->display();
 	}
 }
