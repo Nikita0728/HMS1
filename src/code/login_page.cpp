@@ -131,6 +131,12 @@ inline void runLoginScreen(int* scene, Admin *admin, RenderWindow *window)
                         *scene = 4; //Nurse page
                         return;
                     }
+                     else if (usernameInput=="Patient" && passwordInput=="123")
+                    {
+                        cout << "Patient login recognized\n";
+                        *scene = 4;
+                        return;
+                    }
                     // else if (admin->findReceptionistName(usernameInput) && admin->findReceptionistID(passwordInput))
                     // {
                     //     cout << "Nurse login recognized\n";

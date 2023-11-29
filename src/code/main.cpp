@@ -9,7 +9,7 @@
 int main()
 {
   
-    int* scene = new int(3); 
+    int* scene = new int(4); 
 
     RenderWindow window(VideoMode(1600, 900), "HMS");
     window.setVerticalSyncEnabled(true);
@@ -38,10 +38,11 @@ Nurse nurse("Diya",1001);
                 runReceptionistPage(scene ,&receptionist , &window);
                 window.clear();
                 break;
-                 case 4:
+                case 5:
                 runNursePage(scene ,&nurse , &window);
                 window.clear();
                 break;
+                
             /*
               .
               .
