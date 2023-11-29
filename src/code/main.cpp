@@ -3,6 +3,7 @@
 #include "admin_page.cpp"
 #include "doctor_page.cpp"
 #include "receptionist_page.cpp"
+#include "patient_page.cpp"
 
 
 int main()
@@ -16,6 +17,7 @@ int main()
     Admin admin;
 Doctor doctor("Adam Smith " , 2 ,"Neuro" ,"Surgical ward");
 Receptionist receptionist("Xyz", "DR.lijan stha" , 10  );
+Patient patient("lijan","report");
     while (*scene != -1)
     {
         switch (*scene)
@@ -36,6 +38,11 @@ Receptionist receptionist("Xyz", "DR.lijan stha" , 10  );
                 runReceptionistPage(scene ,&receptionist , &window);
                 window.clear();
                 break;
+                case 4:
+                runPatientPage(scene, &patient , &window);
+                window.clear();
+                break;
+                
             /*
               .
               .

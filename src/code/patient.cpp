@@ -1,21 +1,22 @@
 #include "patient.h"
 
+
 Patient::Patient()
 {
 
 }
-Patient:: Patient(string appmnt , string rpt)
+Patient::Patient(string appmnt , string rpt)
 {
     setAppointment(appmnt);
     setReport(rpt);
 }
-Patient:: setAppointment( string appmnt)
+Patient::setAppointment( string appmnt)
 {
-    appointment=app
+    appointment=appmnt;
 }
-Patient:: setReport( string rpt)
+Patient::setReport( string rpt)
 {
-    appointment=rpt;
+    report=rpt;
 }
 
 Patient::getAppointment(){

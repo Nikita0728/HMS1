@@ -14,8 +14,8 @@ class Patient
     void getAppointment();
     void getReport();
 
-    string setAppointment();
-    string setReport();
+    string setAppointment(string );
+    string setReport(string);
 };
 
 #endif
