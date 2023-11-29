@@ -4,12 +4,14 @@
 #include "doctor_page.cpp"
 #include "receptionist_page.cpp"
 #include "nurse_page.cpp"
+#include "patient_page.cpp"
+#include "patient.cpp"
 
 
 int main()
 {
   
-    int* scene = new int(4); 
+    int* scene = new int(0); 
 
     RenderWindow window(VideoMode(1600, 900), "HMS");
     window.setVerticalSyncEnabled(true);
@@ -17,6 +19,7 @@ int main()
     Admin admin;
 Doctor doctor("Adam Smith " , 2 ,"Neuro" ,"Surgical ward");
 Receptionist receptionist("Xyz", "DR.lijan stha" , 10  );
+Patient patient ("lijan " , "reportt");
 Nurse nurse("Diya",1001);
     while (*scene != -1)
     {
@@ -36,6 +39,10 @@ Nurse nurse("Diya",1001);
                 break;
                 case 3:
                 runReceptionistPage(scene ,&receptionist , &window);
+                window.clear();
+                break;
+                case 4:
+                runPatientPage(scene ,&patient , &window);
                 window.clear();
                 break;
                 case 5:
