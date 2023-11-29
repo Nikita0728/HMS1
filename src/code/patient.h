@@ -7,5 +7,15 @@ using namespace std;
 class Patient
 {
     private:
-    string  
-}
+    string  appointment, report;
+    public:
+    Patient();
+    Patient(string , string);
+    void getAppointment();
+    void getReport();
+
+    string setAppointment();
+    string setReport();
+};
+
+#endif
