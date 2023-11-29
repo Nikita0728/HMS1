@@ -4,12 +4,13 @@
 #include "doctor_page.cpp"
 #include "receptionist_page.cpp"
 #include "patient_page.cpp"
+#include "patient.cpp"
 
 
 int main()
 {
   
-    int* scene = new int(0); 
+    int* scene = new int(4); 
 
     RenderWindow window(VideoMode(1600, 900), "HMS");
     window.setVerticalSyncEnabled(true);

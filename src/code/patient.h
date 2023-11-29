@@ -11,11 +11,11 @@ class Patient
     public:
     Patient();
     Patient(string , string);
-    void getAppointment();
-    void getReport();
+    string getAppointment();
+    string getReport();
 
-    string setAppointment(string );
-    string setReport(string);
+void setAppointment( string);
+    void setReport(string);
 };
 
 #endif

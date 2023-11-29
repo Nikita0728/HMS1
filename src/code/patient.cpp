@@ -10,19 +10,19 @@ Patient::Patient(string appmnt , string rpt)
     setAppointment(appmnt);
     setReport(rpt);
 }
-Patient::setAppointment( string appmnt)
-{
-    appointment=appmnt;
-}
-Patient::setReport( string rpt)
-{
-    report=rpt;
-}
-
-Patient::getAppointment(){
+   string Patient::getAppointment()
+   {
     return appointment;
-}
-Patient::getReport()
+   }
+    string Patient::getReport(){
+        return report;
+    }
+
+void Patient::setAppointment( string appmnt)
 {
-    return report;
+appointment =appmnt;
 }
+void Patient::setReport(string rpt)
+    {
+report=rpt;
+    }

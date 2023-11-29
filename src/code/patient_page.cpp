@@ -18,20 +18,22 @@ inline void runPatientPage(int* scene , Patient* patient , RenderWindow* window)
 		return;
 	}
     Texture backgroundTexture;
-	if (!backgroundTexture.loadFromFile("src/Assets/Backgrounds/HMS-Doctor_Screen.jpg"))
+	if (!backgroundTexture.loadFromFile("src/Assets/Backgrounds/patient.png"))
 	{
 		cout << "Error loading background image\n";
 		*scene = -1;
 		return;
 	}
-Text appointment("Book Appointment", font , 60 ),
-report("Check Reports", font ,50),
+Text appointment("Book Appointment", font , 45 ),
+report("Check Reports", font ,45),
 Log_out("Log out", font , 30);
 
-appointment.setPosition(Vector2f(400 ,200));
-report.setPosition(Vector2f(600 , 200));
+appointment.setPosition(Vector2f(300 ,500));
+report.setPosition(Vector2f(1100 , 500));
 Log_out.setPosition(Vector2f(1400,50));
 
+appointment.setFillColor(sf::Color::White);
+report.setFillColor(sf::Color::White);
 Log_out.setFillColor(sf::Color::Blue);
 
    RectangleShape background(Vector2f(1600, 1050));
