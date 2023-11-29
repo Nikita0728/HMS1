@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <string>
-#include "doctor.h"
+#include "nurse.h"
 #include "admin.h"
 using namespace std;
 using namespace sf;
@@ -9,7 +9,7 @@ using namespace sf;
 
 
  
-inline void runDoctorPage(int* scene, Doctor* doctor, RenderWindow* window)
+inline void runNursePage(int* scene, Nurse* nurse, RenderWindow* window)
 {
 	/* Loading the Inika font and if failed to do so close the program */
 
@@ -34,20 +34,16 @@ inline void runDoctorPage(int* scene, Doctor* doctor, RenderWindow* window)
     	Text Prescribe_MedicineText("Prescribe Medicine", font, 60),
 		Check_ReportsText("Check Reports", font, 60),
 		Draw_SalaryText("Draw Salary", font, 60),
-	Doctor_name(doctor->getName(), font, 60),
-Doctor_id(doctor->getID(), font, 56),
-Doctor_specialization(doctor->getSpecialization() , font ,56),
-Doctor_department(doctor->getDepartment(), font ,56),
+	Nurse_name(nurse->getName(), font, 60),
+ Nurse_id(nurse->getID(), font, 56),
 
 Log_out("Log out", font , 30);
 
 	Prescribe_MedicineText.setPosition(Vector2f(900, 200));
 	Check_ReportsText.setPosition(Vector2f(900, 500));
 	Draw_SalaryText.setPosition(Vector2f(900, 800));
-Doctor_name.setPosition(Vector2f(400,220));
-Doctor_id.setPosition(Vector2f(300, 340));
-Doctor_specialization.setPosition(Vector2f(400 ,450));
-Doctor_department.setPosition(Vector2f(370 ,580));
+Nurse_name.setPosition(Vector2f(400,220));
+Nurse_id.setPosition(Vector2f(300, 340));
 Log_out.setPosition(Vector2f(1400,50));
 
 Log_out.setFillColor(sf::Color::Blue);
@@ -95,10 +91,8 @@ Log_out.setFillColor(sf::Color::Blue);
 		window->draw(Prescribe_MedicineText);
 		window->draw(Check_ReportsText);
 		window->draw(Draw_SalaryText);
-	window->draw(Doctor_name);
-	window->draw(Doctor_id);
-	window->draw(Doctor_specialization);
-	window->draw(Doctor_department);
+	window->draw(Nurse_name);
+	window->draw(Nurse_id);
 	window->draw(Log_out);
 		window->display();
 		}
