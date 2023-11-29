@@ -29,7 +29,7 @@ report("Check Reports", font ,45),
 Log_out("Log out", font , 30);
 
 appointment.setPosition(Vector2f(300 ,500));
-report.setPosition(Vector2f(1100 , 500));
+report.setPosition(Vector2f(1000 , 500));
 Log_out.setPosition(Vector2f(1400,50));
 
 appointment.setFillColor(sf::Color::White);
@@ -52,18 +52,31 @@ Log_out.setFillColor(sf::Color::Blue);
 			}
 
 if (event.type == Event::MouseButtonPressed)
-            {if (Log_out.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
+            {
+				if (appointment.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
+				{
+					cout << "Appointment button pressed!\n";
+				}
+				if (report.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
+				{
+					cout << " Check Reports button pressed!\n";
+				}
+				if (Log_out.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
 				{
 					*scene =0;
 					return;
 					cout<<"logoutpressed";
 				}
-                window->draw(background);
+               
+                
+                }
+				 window->draw(background);
                 window->draw(appointment);
                 window->draw(report);
                 	window->draw(Log_out);
                 window->display();
-                
-                }
+				
         }
-}}
+}
+
+				}
