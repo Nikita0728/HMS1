@@ -20,7 +20,7 @@ public:
 	string getPName();
 	string getDName();
 	int getTime();
-	
+	string getID();
 
 	/* Setter Functions */
 	void setPName(string );
