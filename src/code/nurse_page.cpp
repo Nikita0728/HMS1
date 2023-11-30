@@ -42,7 +42,7 @@ Log_out("Go Back", font , 30);
 	Patient_details.setPosition(Vector2f(900, 200));
 	Shifts.setPosition(Vector2f(900, 500));
 	Draw_SalaryText.setPosition(Vector2f(900, 800));
-Nurse_name.setPosition(Vector2f(600,220));
+Nurse_name.setPosition(Vector2f(550,210));
 Nurse_id.setPosition(Vector2f(250, 400));
 Log_out.setPosition(Vector2f(1400,50));
 
