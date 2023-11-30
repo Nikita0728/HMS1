@@ -25,25 +25,25 @@ inline void runNursePage(int* scene, Nurse* nurse, RenderWindow* window)
 
 	/* Loading the background and if failed to do so close the program */
 	Texture backgroundTexture;
-	if (!backgroundTexture.loadFromFile("src/Assets/Backgrounds/HMS-Doctor_Screen.jpg"))
+	if (!backgroundTexture.loadFromFile("src/Assets/Backgrounds/nurse.png"))
 	{
 		cout << "Error loading background image\n";
 		*scene = -1;
 		return;
 	}
-    	Text Prescribe_MedicineText("Prescribe Medicine", font, 60),
-		Check_ReportsText("Check Reports", font, 60),
+    	Text Patient_details("Patient details", font, 60),
+		Shifts("Shifts", font, 60),
 		Draw_SalaryText("Draw Salary", font, 60),
 	Nurse_name(nurse->getName(), font, 60),
  Nurse_id(nurse->getID(), font, 56),
 
-Log_out("Log out", font , 30);
+Log_out("Go Back", font , 30);
 
-	Prescribe_MedicineText.setPosition(Vector2f(900, 200));
-	Check_ReportsText.setPosition(Vector2f(900, 500));
+	Patient_details.setPosition(Vector2f(900, 200));
+	Shifts.setPosition(Vector2f(900, 500));
 	Draw_SalaryText.setPosition(Vector2f(900, 800));
-Nurse_name.setPosition(Vector2f(400,220));
-Nurse_id.setPosition(Vector2f(300, 340));
+Nurse_name.setPosition(Vector2f(600,220));
+Nurse_id.setPosition(Vector2f(250, 400));
 Log_out.setPosition(Vector2f(1400,50));
 
 Log_out.setFillColor(sf::Color::Blue);
@@ -65,13 +65,13 @@ Log_out.setFillColor(sf::Color::Blue);
 
 			if (event.type == Event::MouseButtonPressed)
 			{
-				if (Prescribe_MedicineText.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
+				if (Patient_details.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
 				{
-					cout << "Prescribed pressed!\n";
+					cout << "Patient details!\n";
 				}
-				if (Check_ReportsText.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
+				if (Shifts.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
 				{
-					cout << " Check Reports button pressed!\n";
+					cout << " Shifts button pressed!\n";
 				}
 				if (Draw_SalaryText.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
 				{
@@ -88,8 +88,8 @@ Log_out.setFillColor(sf::Color::Blue);
 
 		window->draw(background);
 
-		window->draw(Prescribe_MedicineText);
-		window->draw(Check_ReportsText);
+		window->draw(Patient_details);
+		window->draw(Shifts);
 		window->draw(Draw_SalaryText);
 	window->draw(Nurse_name);
 	window->draw(Nurse_id);

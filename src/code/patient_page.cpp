@@ -26,7 +26,7 @@ inline void runPatientPage(int* scene , Patient* patient , RenderWindow* window)
 	}
 Text appointment("Book Appointment", font , 45 ),
 report("Check Reports", font ,45),
-Log_out("Log out", font , 30);
+Log_out("Go Back", font , 30);
 
 appointment.setPosition(Vector2f(300 ,500));
 report.setPosition(Vector2f(1000 , 500));

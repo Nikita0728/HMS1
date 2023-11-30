@@ -36,7 +36,7 @@ inline void runAdminPage(int* scene, Admin* admin, RenderWindow* window)
 	Text addStaffText("Add Staff\n Member", font, 60),
 		deleteStaffText("Delete Staff\n  Member", font, 60),
 		updateStaffText("Update Staff\n   Member", font, 60),
-		Log_out("Log out", font , 30);
+		Log_out("Go Back", font , 30);
 
 	addStaffText.setPosition(Vector2f(136, 54));
 	deleteStaffText.setPosition(Vector2f(652, 54));

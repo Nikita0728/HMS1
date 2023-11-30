@@ -40,7 +40,7 @@ inline void runReceptionistPage(int* scene, Receptionist* Receptionist, RenderWi
 		Patient_list_first(Receptionist->getPName() , font ,50),
 		Doctor_list_1(Receptionist->getDName(), font ,50),
 		Time_list_1( to_string( Receptionist->getTime()),font, 50),
-		Log_out("Log out", font , 30),
+		Log_out("Go Back", font , 30),
 
 		//list 2
 		Patient_list_2(Receptionist->getPName() , font ,50),
