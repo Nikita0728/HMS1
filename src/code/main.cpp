@@ -6,12 +6,12 @@
 #include "nurse_page.cpp"
 #include "patient_page.cpp"
 #include "patient.cpp"
-
+#include "showpatientdetail.cpp"
 
 int main()
 {
   
-    int* scene = new int(0); 
+    int* scene = new int(6); 
 
     RenderWindow window(VideoMode(1600, 900), "HMS");
     window.setVerticalSyncEnabled(true);
@@ -47,6 +47,10 @@ Nurse nurse("Diya",1001);
                 break;
                 case 5:
                 runNursePage(scene ,&nurse , &window);
+                window.clear();
+                break;
+                case 6:
+                runPatientdetail(scene , &window);
                 window.clear();
                 break;
                 
