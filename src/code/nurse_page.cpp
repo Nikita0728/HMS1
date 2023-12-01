@@ -68,6 +68,8 @@ Log_out.setFillColor(sf::Color::Blue);
 				if (Patient_details.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
 				{
 					cout << "Patient details!\n";
+					*scene=6;
+					return;
 				}
 				if (Shifts.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
 				{

@@ -11,7 +11,7 @@
 int main()
 {
   
-    int* scene = new int(6); 
+    int* scene = new int(0); 
 
     RenderWindow window(VideoMode(1600, 900), "HMS");
     window.setVerticalSyncEnabled(true);
@@ -21,6 +21,7 @@ Doctor doctor("Adam Smith " , 2 ,"Neuro" ,"Surgical ward");
 Receptionist receptionist("Xyz", "DR.lijan stha" , 10  );
 Patient patient ("lijan " , "reportt");
 Nurse nurse("Diya",1001);
+patientlist list("xyz ", "ayx", 1);
     while (*scene != -1)
     {
         switch (*scene)
@@ -50,7 +51,7 @@ Nurse nurse("Diya",1001);
                 window.clear();
                 break;
                 case 6:
-                runPatientdetail(scene , &window);
+                runPatientdetail(scene ,&list, &window);
                 window.clear();
                 break;
                 
