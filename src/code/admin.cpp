@@ -28,7 +28,7 @@ bool Admin::findDoctorID(string id)
 	return false;
 }
 
-void Admin::addDoctorToDB(string name, int id ,string specs, string depart)
+void Admin::addDoctorToDB(string name, int id, string specs, string depart)
 {
 	Doctor newDoctor(name, id, specs, depart);
 	_doctorDB.push_back(newDoctor);
@@ -70,17 +70,17 @@ void Admin::addNurseToDB(string name, int id)
 
 /* Receptionest Functions */
 
- bool Admin::findReceptionistName(string name)
- {
- 	int i;
+bool Admin::findReceptionistName(string name)
+{
+	int i;
 	for (i = 0; i < _receptionistDB.size(); i++)
- 	{
- 		if (_receptionistDB[i].getPName() == name)
- 			return true;
- 	}
+	{
+		if (_receptionistDB[i].getPName() == name)
+			return true;
+	}
 
- 	return false;
- }
+	return false;
+}
 //  bool Admin::findReceptionistID(string id)
 //  {
 //  	int i;
@@ -94,8 +94,8 @@ void Admin::addNurseToDB(string name, int id)
 //  	return false;
 //  }
 
-void Admin::addReceptionistToDB(string pname,  string dname, int time)
+void Admin::addReceptionistToDB(string pname, string dname, int time)
 {
-	Receptionist newReceptionist(pname,dname, time);
+	Receptionist newReceptionist(pname, dname, time);
 	_receptionistDB.push_back(newReceptionist);
 }

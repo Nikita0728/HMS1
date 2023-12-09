@@ -6,7 +6,7 @@
 using namespace std;
 using namespace sf;
 
-inline void runAdminPage(int* scene, Admin* admin, RenderWindow* window)
+inline void runAdminPage(int *scene, Admin *admin, RenderWindow *window)
 {
 	/* Loading the Inika font and if failed to do so close the program */
 	Font font;
@@ -16,7 +16,6 @@ inline void runAdminPage(int* scene, Admin* admin, RenderWindow* window)
 		*scene = -1;
 		return;
 	}
-
 
 	/* Loading the background and if failed to do so close the program */
 	Texture backgroundTexture;
@@ -36,12 +35,12 @@ inline void runAdminPage(int* scene, Admin* admin, RenderWindow* window)
 	Text addStaffText("Add Staff\n Member", font, 60),
 		deleteStaffText("Delete Staff\n  Member", font, 60),
 		updateStaffText("Update Staff\n   Member", font, 60),
-		Log_out("Go Back", font , 30);
+		Log_out("Go Back", font, 30);
 
 	addStaffText.setPosition(Vector2f(136, 54));
 	deleteStaffText.setPosition(Vector2f(652, 54));
 	updateStaffText.setPosition(Vector2f(1164, 54));
-	Log_out.setPosition(Vector2f(1400,800));
+	Log_out.setPosition(Vector2f(1400, 800));
 	Log_out.setFillColor(sf::Color::Blue);
 
 	/* End of declaring */
@@ -73,13 +72,12 @@ inline void runAdminPage(int* scene, Admin* admin, RenderWindow* window)
 				}
 				if (Log_out.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
 				{
-					*scene =0;
+					*scene = 0;
 					return;
-					cout<<"logoutpressed";
+					cout << "logoutpressed";
 				}
 			}
 		}
-
 
 		/* Simulating a hover effect on the buttons in the scene */
 		addStaffText.setFillColor(Color(0xF6, 0xF1, 0xF1));
@@ -108,7 +106,7 @@ inline void runAdminPage(int* scene, Admin* admin, RenderWindow* window)
 		window->draw(addStaffText);
 		window->draw(deleteStaffText);
 		window->draw(updateStaffText);
-window->draw(Log_out);
+		window->draw(Log_out);
 		window->display();
 	}
 }

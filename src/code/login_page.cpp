@@ -6,7 +6,7 @@
 using namespace std;
 using namespace sf;
 
-inline void runLoginScreen(int* scene, Admin *admin, RenderWindow *window)
+inline void runLoginScreen(int *scene, Admin *admin, RenderWindow *window)
 {
     /* Loading the Inika font and if failed to do so close the program */
     Font font;
@@ -22,12 +22,12 @@ inline void runLoginScreen(int* scene, Admin *admin, RenderWindow *window)
     if (!backgroundTexture.loadFromFile("src/Assets/Backgrounds/HMS-Login_Page.jpg"))
     {
         cout << "Error loading background image\n";
-            *scene = -1;
-            return;
+        *scene = -1;
+        return;
     }
 
     /* Beginning of declaring shapes and texts to use */
-    sf::Color transparentColor(255, 255, 255, 0);
+    Color transparentColor(255, 255, 255, 0);
 
     RectangleShape background(Vector2f(1600, 900));
     background.setTexture(&backgroundTexture);
@@ -77,12 +77,12 @@ inline void runLoginScreen(int* scene, Admin *admin, RenderWindow *window)
                     if (usernameInput.size() > 0 && usernameBox.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
                     {
                         usernameInput.erase(usernameInput.end() - 1); // Remove the last character from the input string
-                        usernameInputText.setString(usernameInput); // Update the input text object with the new input string
+                        usernameInputText.setString(usernameInput);   // Update the input text object with the new input string
                     }
 
                     if (passwordInput.size() > 0 && passwordBox.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
                     {
-                        passwordInput.erase(passwordInput.end() - 1); // Remove the last character from the input string
+                        passwordInput.erase(passwordInput.end() - 1);                   // Remove the last character from the input string
                         passwordInputText.setString(string(passwordInput.size(), '*')); // Update the input text object with a string of asterisks
                     }
                 }
@@ -112,26 +112,26 @@ inline void runLoginScreen(int* scene, Admin *admin, RenderWindow *window)
                         *scene = 1; // Admin's Page
                         return;
                     }
-                    else if (usernameInput=="Doctor" && passwordInput=="123")
+                    else if (usernameInput == "Doctor" && passwordInput == "123")
                     {
-                        
+
                         cout << "Doctor login recognized\n";
                         *scene = 2; // Doctor Page
                         return;
                     }
-                    else if (usernameInput=="Reception" && passwordInput=="123")
+                    else if (usernameInput == "Reception" && passwordInput == "123")
                     {
                         cout << "Reception login recognized\n";
-                        *scene = 3; //Reception page
+                        *scene = 3; // Reception page
                         return;
                     }
-                    else if (usernameInput=="Nurse" && passwordInput=="123")
+                    else if (usernameInput == "Nurse" && passwordInput == "123")
                     {
                         cout << "Nurse login recognized\n";
-                        *scene = 5; //Nurse page
+                        *scene = 5; // Nurse page
                         return;
                     }
-                     else if (usernameInput=="Patient" && passwordInput=="123")
+                    else if (usernameInput == "Patient" && passwordInput == "123")
                     {
                         cout << "Patient login recognized\n";
                         *scene = 4;
@@ -147,7 +147,6 @@ inline void runLoginScreen(int* scene, Admin *admin, RenderWindow *window)
                     {
                         cout << "Incorrect username or password" << endl;
                     }
-                   
                 }
             }
         }

@@ -10,7 +10,6 @@ private:
 	string _name, _id;
 
 public:
-
 	/* Constructors */
 	Nurse();
 	Nurse(string name, int id);
@@ -22,7 +21,6 @@ public:
 	/* Setter Functions */
 	void setName(string name);
 	void setID(int id);
-
 };
 
 #endif // !NURSE_H

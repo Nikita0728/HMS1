@@ -6,15 +6,16 @@ using namespace std;
 
 class Patient
 {
-    private:
-    string  appointment, report;
-    public:
+private:
+    string appointment, report;
+
+public:
     Patient();
-    Patient(string , string);
+    Patient(string, string);
     string getAppointment();
     string getReport();
 
-void setAppointment( string);
+    void setAppointment(string);
     void setReport(string);
 };
 

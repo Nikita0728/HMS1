@@ -12,14 +12,13 @@ private:
 	vector<Doctor> _doctorDB;
 	vector<Nurse> _nurseDB;
 	vector<Receptionist> _receptionistDB;
-	
-public:
 
+public:
 	/* Doctor Functions */
 	bool findDoctorName(string name);
 	bool findDoctorID(string id);
 
-	void addDoctorToDB(string name, int id , string specs, string depart );
+	void addDoctorToDB(string name, int id, string specs, string depart);
 
 	/* Nurse Functions */
 	bool findNurseName(string name);
@@ -29,10 +28,8 @@ public:
 
 	/* Receptionist Functions */
 	bool findReceptionistName(string name);
-	
 
-	void addReceptionistToDB(string pname,string dname, int time);
-
+	void addReceptionistToDB(string pname, string dname, int time);
 };
 
 #endif

@@ -6,10 +6,7 @@
 using namespace std;
 using namespace sf;
 
-
-
- 
-inline void runNursePage(int* scene, Nurse* nurse, RenderWindow* window)
+inline void runNursePage(int *scene, Nurse *nurse, RenderWindow *window)
 {
 	/* Loading the Inika font and if failed to do so close the program */
 
@@ -21,8 +18,6 @@ inline void runNursePage(int* scene, Nurse* nurse, RenderWindow* window)
 		return;
 	}
 
-
-
 	/* Loading the background and if failed to do so close the program */
 	Texture backgroundTexture;
 	if (!backgroundTexture.loadFromFile("src/Assets/Backgrounds/nurse.png"))
@@ -31,27 +26,27 @@ inline void runNursePage(int* scene, Nurse* nurse, RenderWindow* window)
 		*scene = -1;
 		return;
 	}
-    	Text Patient_details("Patient details", font, 60),
+	Text Patient_details("Patient details", font, 60),
 		Shifts("Shifts", font, 60),
 		Draw_SalaryText("Draw Salary", font, 60),
-	Nurse_name(nurse->getName(), font, 60),
- Nurse_id(nurse->getID(), font, 56),
+		Nurse_name(nurse->getName(), font, 60),
+		Nurse_id(nurse->getID(), font, 56),
 
-Log_out("Go Back", font , 30);
+		Log_out("Go Back", font, 30);
 
 	Patient_details.setPosition(Vector2f(900, 200));
 	Shifts.setPosition(Vector2f(900, 500));
 	Draw_SalaryText.setPosition(Vector2f(900, 800));
-Nurse_name.setPosition(Vector2f(550,210));
-Nurse_id.setPosition(Vector2f(250, 400));
-Log_out.setPosition(Vector2f(1400,50));
+	Nurse_name.setPosition(Vector2f(550, 210));
+	Nurse_id.setPosition(Vector2f(250, 400));
+	Log_out.setPosition(Vector2f(1400, 50));
 
-Log_out.setFillColor(sf::Color::Blue);
+	Log_out.setFillColor(sf::Color::Blue);
 
-    RectangleShape background(Vector2f(1600, 1050));
+	RectangleShape background(Vector2f(1600, 1050));
 	background.setTexture(&backgroundTexture);
 	background.setPosition(Vector2f(0, 0));
-    while (window->isOpen())
+	while (window->isOpen())
 	{
 		Event event;
 		while (window->pollEvent(event))
@@ -61,14 +56,13 @@ Log_out.setFillColor(sf::Color::Blue);
 				*scene = -1;
 				window->close();
 			}
-			
 
 			if (event.type == Event::MouseButtonPressed)
 			{
 				if (Patient_details.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
 				{
 					cout << "Patient details!\n";
-					*scene=6;
+					*scene = 6;
 					return;
 				}
 				if (Shifts.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
@@ -81,21 +75,22 @@ Log_out.setFillColor(sf::Color::Blue);
 				}
 				if (Log_out.getGlobalBounds().contains(Mouse::getPosition(*window).x, Mouse::getPosition(*window).y))
 				{
-					*scene =0;
+					*scene = 0;
 					return;
-					cout<<"logoutpressed";
+					cout << "logoutpressed";
 				}
 			}
-            window->clear(Color::White);
+			window->clear(Color::White);
 
-		window->draw(background);
+			window->draw(background);
 
-		window->draw(Patient_details);
-		window->draw(Shifts);
-		window->draw(Draw_SalaryText);
-	window->draw(Nurse_name);
-	window->draw(Nurse_id);
-	window->draw(Log_out);
-		window->display();
+			window->draw(Patient_details);
+			window->draw(Shifts);
+			window->draw(Draw_SalaryText);
+			window->draw(Nurse_name);
+			window->draw(Nurse_id);
+			window->draw(Log_out);
+			window->display();
 		}
-}}
+	}
+}

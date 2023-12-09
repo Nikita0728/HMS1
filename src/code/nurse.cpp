@@ -2,7 +2,6 @@
 
 Nurse::Nurse()
 {
-
 }
 
 Nurse::Nurse(string name, int id)
@@ -11,18 +10,22 @@ Nurse::Nurse(string name, int id)
 	setID(id);
 }
 
-string Nurse::getName() {
+string Nurse::getName()
+{
 	return _name;
 }
 
-string Nurse::getID() {
+string Nurse::getID()
+{
 	return _id;
 }
 
-void Nurse::setName(string name) {
+void Nurse::setName(string name)
+{
 	_name = name;
 }
 
-void Nurse::setID(int id) {
+void Nurse::setID(int id)
+{
 	_id = "N-" + to_string(id);
 }

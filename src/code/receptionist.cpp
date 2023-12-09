@@ -2,33 +2,38 @@
 
 Receptionist::Receptionist()
 {
-
 }
 
-Receptionist::Receptionist(string pname, string dname , int time)
+Receptionist::Receptionist(string pname, string dname, int time)
 {
 	setPName(pname);
 	setDName(dname);
 	setTime(time);
 }
 
-string Receptionist::getPName() {
+string Receptionist::getPName()
+{
 	return P_name;
 }
-string Receptionist::getDName() {
+string Receptionist::getDName()
+{
 	return D_name;
-;
+	;
 }
-int Receptionist::getTime() {
+int Receptionist::getTime()
+{
 	return Time;
 }
 
-void Receptionist::setPName(string pname) {
+void Receptionist::setPName(string pname)
+{
 	P_name = pname;
 }
-void Receptionist::setDName(string dname) {
+void Receptionist::setDName(string dname)
+{
 	D_name = dname;
 }
-void Receptionist::setTime(int time) {
+void Receptionist::setTime(int time)
+{
 	Time = time;
 }
